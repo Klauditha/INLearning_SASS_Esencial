@@ -1,0 +1,36 @@
+.info-page{
+  h1{
+    @include rotulos(map-get($colores, 'primary'));
+
+    &:hover{
+      color: crea-over(map-get($colores, 'primary'), false);
+    }
+  }
+  h2{
+    @include rotulos(map-get($colores, 'secondary'));
+
+    &:hover{
+      color: crea-over(map-get($colores, 'secondary'), true);
+    }
+  }
+
+  $ancho-li: 100% / 3;
+  #arrivalinfo{
+    li{
+      @include card (#e8e8e8);
+      display: inline-block;
+      margin: 7px;
+      width: calc(#{$ancho-li} - 60px);
+      vertical-align: top;
+    }
+  }
+
+  .checklist{
+    @extend .content;
+    li{
+      @include card (#e8e8e8);
+      display: inline-block;
+      @include random-block(30);
+    }
+  }
+}

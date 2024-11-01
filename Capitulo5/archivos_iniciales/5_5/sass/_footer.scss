@@ -1,0 +1,23 @@
+footer{
+  background: #333333;
+  padding: 20px 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  #socialmedia{
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    li{
+      display: inline-block;
+      padding: 0 10px;
+      a{
+        img{
+          width: 30px;
+          border-radius: 50%;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}

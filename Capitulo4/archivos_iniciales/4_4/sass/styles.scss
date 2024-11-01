@@ -1,0 +1,142 @@
+@import url(http://fonts.googleapis.com/css?family=Exo+2:400,200,600,800);
+
+$booleano: true;
+$miNull: null;
+$miMap: ("boackground": #666666, "border": #000000);
+
+$color-primario: #DF4848;
+$color-secundario: #0e83a0;
+$borde-primario: 1px solid $color-secundario;
+
+$sufijo-rooms: 'rooms';
+$sufijo-dining: 'dining';
+
+body, ul, li{
+  margin: 0;
+  padding: 0;
+  font: 200 1em/1.5em "Exo 2", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#main-wrapper{
+  position: relative;
+  min-height: 100vh;
+}
+
+header{
+  height: 44px;
+  background-image: linear-gradient(to bottom, #0a5c71, #063642);
+  position: relative;
+
+  nav{
+    position: absolute;
+    bottom: 2px;
+    li{
+      display: inline-block;
+      margin: 0 15px;
+      vertical-align: baseline;
+      a{
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+
+        &:hover{
+          color: #efc94c;
+        }
+      }
+    }
+  }
+}
+
+main{
+  margin: 20px 20px 0;
+  padding-bottom: 20px;
+
+  h1{
+    color: $color-primario;
+    font-weight: 600;
+    font-size: 1.5em;
+  }
+}
+
+$ancho: 100% / 5;
+#main-content{
+  width: 80%;
+  margin: auto;
+
+  img{
+    margin: 5px;
+    width: calc(#{$ancho} - 10px);
+  }
+}
+
+.gallery{
+  font-size: 0;
+  img{
+    border-radius: 3px;
+    overflow: hidden;
+
+    &.hidesm{
+      display: none;
+    }
+  }
+}
+
+.content{
+  width: 80%;
+  margin: 20px auto;
+  h2, h1{
+    display: block;
+    color: $color-secundario;
+    font-weight: 600;
+  }
+
+  #{'&-'+$sufijo-rooms}{
+    border-bottom: $borde-primario;
+    img{
+      width: 100%;
+    }
+    p{
+      margin-bottom: 20px;
+    }
+  }
+
+  #{'&-'+$sufijo-dining}{
+    border-bottom: $borde-primario;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    img{
+      width: 45%;
+      margin-right: 10%;
+      display: inline-block;
+      vertical-align: top;
+    }
+    p{
+      width: 45%;
+      display: inline-block;
+      margin-top: 0;
+    }
+  }
+}
+
+footer{
+  background: #333333;
+  padding: 20px 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  #socialmedia{
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    li{
+      display: inline-block;
+      padding: 0 10px;
+      a{
+        img{
+          width: 30px;
+          border-radius: 50%;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}

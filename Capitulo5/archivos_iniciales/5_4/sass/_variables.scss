@@ -1,0 +1,47 @@
+$booleano: true;
+$miNull: null;
+$miMap: ("boackground": #666666, "border": #000000);
+
+$color-primario: #DF4848;
+$color-secundario: #0e83a0;
+$borde-primario: 1px solid $color-secundario;
+
+$sufijo-rooms: 'rooms';
+$sufijo-dining: 'dining';
+
+@mixin card ($color, $sombra: none){
+  border: 1px solid $color;
+  padding: 10px;
+  background-color: #FFFFFF;
+  margin: 0 10px 10px 0;
+  box-shadow: $sombra;
+}
+
+@mixin rotulos ($color) {
+  display: block;
+  color: $color;
+  font-weight: 600;
+}
+
+@function crea-over ($color, $complementario){
+  @if($complementario){
+    @return complement($color);
+  } @else {
+    @return grayscale($color);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

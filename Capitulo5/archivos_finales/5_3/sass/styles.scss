@@ -1,0 +1,86 @@
+@import 'variables', 'header', 'main', 'footer';
+@import 'pages/info';
+
+@import url(http://fonts.googleapis.com/css?family=Exo+2:400,200,600,800);
+
+
+
+body, ul, li{
+  margin: 0;
+  padding: 0;
+  font: 200 1em/1.5em "Exo 2", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#main-wrapper{
+  position: relative;
+  min-height: 100vh;
+}
+
+
+
+$ancho: 100% / 5;
+#main-content{
+  width: 80%;
+  margin: auto;
+
+  img{
+    margin: 5px;
+    width: calc(#{$ancho} - 10px);
+  }
+}
+
+.gallery{
+  font-size: 0;
+  img{
+    border-radius: 3px;
+    overflow: hidden;
+
+    &.hidesm{
+      display: none;
+    }
+  }
+}
+
+.content{
+  width: 80%;
+  margin: 20px auto;
+  h2, h1{
+    @include rotulos($color-secundario);
+  }
+
+  &-rooms{
+    @extend .content;
+    border-bottom: $borde-primario;
+    img{
+      width: 100%;
+    }
+    p{
+      margin-bottom: 20px;
+    }
+  }
+
+  &-dining{
+    @extend .content;
+    border-bottom: $borde-primario;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    img{
+      width: 45%;
+      margin-right: 10%;
+      display: inline-block;
+      vertical-align: top;
+
+      @include card (#e8e8e8, (0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19)));
+    }
+    p{
+      width: 45%;
+      display: inline-block;
+      margin-top: 0;
+    }
+  }
+}
+
+
+form{
+  @include card (#ccc, (0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19))) ;
+}

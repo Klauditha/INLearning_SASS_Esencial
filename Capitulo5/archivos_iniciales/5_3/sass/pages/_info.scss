@@ -1,0 +1,36 @@
+.info-page{
+  h1{
+    @include rotulos($color-primario);
+
+    &:hover{
+      color: crea-over($color-primario);
+    }
+  }
+  h2{
+    @include rotulos($color-secundario);
+
+    &:hover{
+      color: crea-over($color-secundario);
+    }
+  }
+
+  $ancho-li: 100% / 3;
+  #arrivalinfo{
+    li{
+      @include card (#e8e8e8);
+      display: inline-block;
+      margin: 7px;
+      width: calc(#{$ancho-li} - 60px);
+      vertical-align: top;
+    }
+  }
+
+  .checklist{
+    @extend .content;
+    li{
+      @include card (#e8e8e8);
+      display: inline-block;
+
+    }
+  }
+}
